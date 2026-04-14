@@ -270,13 +270,13 @@ export default function SenditMORBingo() {
                   {isFree ? (
                     <div className="flex flex-col items-center justify-center leading-tight">
                       <span
-                        className={`font-black ${conferenceMode ? "text-xs sm:text-base" : "text-[10px] sm:text-sm"}`}
+                        className={`font-black ${conferenceMode ? "text-sm sm:text-lg" : "text-sm sm:text-base"}`}
                         style={{ color: BRAND.nero }}
                       >
                         {FREE_SPACE_LINE_1}
                       </span>
                       <span
-                        className={`font-semibold italic mt-0.5 ${conferenceMode ? "text-[8px] sm:text-[10px]" : "text-[7px] sm:text-[9px]"}`}
+                        className={`font-semibold italic mt-0.5 ${conferenceMode ? "text-[10px] sm:text-xs" : "text-[9px] sm:text-[11px]"}`}
                         style={{ color: BRAND.nero }}
                       >
                         {FREE_SPACE_LINE_2}
@@ -286,8 +286,8 @@ export default function SenditMORBingo() {
                     <span
                       className={`font-semibold leading-[1.1] break-words hyphens-auto ${
                         conferenceMode
-                          ? "text-[9px] sm:text-xs"
-                          : "text-[8px] sm:text-[11px]"
+                          ? "text-xs sm:text-base"
+                          : "text-[11px] sm:text-sm"
                       }`}
                       style={{
                         color: isMarked ? BRAND.white : BRAND.smoke,
