@@ -218,7 +218,7 @@ export default function SenditMORBingo() {
           ref={cardRef}
           className={`relative rounded-2xl ${conferenceMode ? "p-4 sm:p-6" : "p-5 sm:p-7"}`}
           style={{
-            backgroundColor: BRAND.nordic,
+            backgroundColor: BRAND.smoke,
             border: `1px solid #1f4346`,
             boxShadow: `0 20px 60px -20px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04)`,
           }}
