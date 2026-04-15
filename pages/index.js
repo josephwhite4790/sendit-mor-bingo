@@ -1,6 +1,22 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import { Download, Shuffle, RotateCcw, Maximize2, Minimize2, Copy, Check } from "lucide-react";
+import { Download, Shuffle, RotateCcw, Maximize2, Minimize2, Copy, Check, Linkedin, Instagram, Facebook } from "lucide-react";
 import { PHRASES } from "../data/phrases";
+
+// Social links — edit URLs here.
+const SOCIAL_LINKS = [
+  { label: "LinkedIn", href: "https://linkedin.com/company/send-it-healthcare", Icon: Linkedin },
+  { label: "Instagram", href: "https://www.instagram.com/senditgigs", Icon: Instagram },
+  {
+    label: "X",
+    href: "https://x.com/SenditHealth",
+    Icon: (props) => (
+      <svg viewBox="0 0 24 24" width={props.size || 18} height={props.size || 18} fill="currentColor" aria-hidden="true">
+        <path d="M18.244 2H21.5l-7.5 8.57L22.75 22h-6.81l-5.34-6.99L4.8 22H1.54l8.03-9.18L1.25 2h6.98l4.83 6.39L18.244 2Zm-1.19 18h1.88L7.04 4H5.06l11.99 16Z" />
+      </svg>
+    ),
+  },
+  { label: "Facebook", href: "https://www.facebook.com/61552970675494", Icon: Facebook },
+];
 
 // FREE SPACE copy — change here if you want different humor.
 const FREE_SPACE_LINE_1 = "FREE";
@@ -319,6 +335,21 @@ export default function SenditMORBingo() {
           <p className="text-xs sm:text-sm" style={{ color: "#5a6a6c" }}>
             {FOOTER_TEXT}
           </p>
+          <div className="mt-4 flex items-center justify-center gap-5">
+            {SOCIAL_LINKS.map(({ label, href, Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Sendit on ${label}`}
+                className="sendit-social-link inline-flex"
+                style={{ color: "#5a6a6c" }}
+              >
+                <Icon size={18} strokeWidth={2} />
+              </a>
+            ))}
+          </div>
         </footer>
       </div>
     </div>

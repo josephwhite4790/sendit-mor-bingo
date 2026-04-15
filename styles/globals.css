@@ -3,3 +3,6 @@
 @tailwind utilities;
 
 html, body { padding: 0; margin: 0; }
+
+.sendit-social-link { transition: color 150ms ease; }
+.sendit-social-link:hover { color: #0493A1; }
